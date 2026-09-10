@@ -42,7 +42,7 @@ export const educationAndTraining = [
   {
     type: "professional-training",
     title: "Diploma in Software Testing",
-    institution: "Ministry of Communications and Information Technology (DEPI)",
+    institution: "Ministry of Communications and Information Technology",
     period: "July 2026 – Dec 2026",
     badge: "Professional Training",
     badgeColor: "emerald",
@@ -192,7 +192,7 @@ export const skillsCategories = [
 export const workExperience = [
   {
     role: "Software Testing Engineer",
-    company: "DEPI (Digital Egypt Pioneers Initiative)",
+    company: "DEPI",
     type: "Professional Practical Training",
     badge: "Training Program",
     badgeColor: "emerald",
@@ -468,7 +468,7 @@ export const certifications = [
   {
     id: "istqb-ctfl",
     title: "ISTQB Certified Tester Foundation Level (CTFL v4.0)",
-    issuer: "ISTQB / DEPI Training Program",
+    issuer: "ISTQB (International Software Testing Qualifications Board)",
     badge: "In Progress / Target 2026",
     badgeColor: "amber",
     date: "In Training (DEPI)",
