@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omnia Khattab | Software Testing Engineer</title>
+    <meta name="description" content="Software Testing Engineer with a Computer Science background and 3+ years of hands-on web development experience, specializing in Manual, API, Database, and Automation Testing." />
+    <meta name="keywords" content="Omnia Khattab, Software Testing Engineer, QA Engineer, Quality Assurance, Manual Testing, API Testing, Automation Testing, Selenium, TestNG, Cairo, Egypt" />
+    <meta name="author" content="Omnia Khattab" />
+    
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Omnia Khattab | Software Testing Engineer" />
+    <meta property="og:description" content="Software Testing Engineer with a Computer Science background and 3+ years of hands-on web development experience, specializing in Manual, API, Database, and Automation Testing." />
+    <meta property="og:site_name" content="Omnia Khattab Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Omnia Khattab | Software Testing Engineer" />
+    <meta name="twitter:description" content="Software Testing Engineer combining web development expertise with meticulous quality assurance." />
+
+    <!-- Theme Initialization Script (prevents FOUC) -->
+    <script>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('portfolio-theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else if (savedTheme === 'dark' || prefersDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-indigo-500/30 selection:text-indigo-600 dark:selection:text-indigo-200 min-h-screen transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
