@@ -456,6 +456,7 @@ export const certifications = [
     badge: "Verified Credential",
     badgeColor: "emerald",
     date: "Completed",
+    certificateImage: "/Introduction to Software Testing Concepts & Techniques_Certificate.PNG",
     description: "Foundational certification covering the fundamental principles of software quality assurance, software testing life cycle (STLC), defect life cycle, and testing techniques.",
     topics: [
       "Fundamentals of Software Testing",

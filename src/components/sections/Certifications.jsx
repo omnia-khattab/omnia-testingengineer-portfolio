@@ -129,6 +129,16 @@ export default function Certifications() {
                 </div>
               </div>
 
+              {selectedCert.certificateImage && (
+                <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+                  <img
+                    src={selectedCert.certificateImage}
+                    alt={`${selectedCert.title} certificate`}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              )}
+
               <div>
                 <h4 className="text-xs font-mono font-semibold uppercase text-slate-500 dark:text-slate-400 mb-1">
                   Course Content & Key Learning
