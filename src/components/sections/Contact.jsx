@@ -290,7 +290,7 @@ export default function Contact() {
                         aria-required="true"
                         aria-invalid={!!errors.name}
                         aria-describedby={errors.name ? 'name-error' : undefined}
-                        placeholder="e.g. Sarah Jenkins"
+                        placeholder="e.g. Omnis Khattab"
                         className={`w-full bg-slate-50 dark:bg-slate-950 border rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 ${
                           errors.name
                             ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500'
@@ -318,7 +318,7 @@ export default function Contact() {
                         aria-required="true"
                         aria-invalid={!!errors.email}
                         aria-describedby={errors.email ? 'email-error' : undefined}
-                        placeholder="sarah@company.com"
+                        placeholder="omnia@company.com"
                         className={`w-full bg-slate-50 dark:bg-slate-950 border rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 ${
                           errors.email
                             ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500'
