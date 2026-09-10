@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Code2,
   ShieldAlert,
@@ -7,7 +7,8 @@ import {
   CheckCircle2,
   Quote,
   Sparkles,
-  Layers
+  Layers,
+  Check
 } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
 import SectionHeading from '../common/SectionHeading';
@@ -20,6 +21,8 @@ const iconMap = {
 };
 
 export default function About() {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <section id="about" className="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,31 +36,76 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* Left Column: Narrative */}
+          {/* Left Column: Narrative with Small Elegant Portrait Card */}
           <div className="lg:col-span-7 space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed text-base">
             
-            <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400" />
-                <span>The Story & Unique Value</span>
-              </h3>
+            <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 space-y-5 shadow-sm">
               
-              <p>
-                I am a <strong>Software Testing Engineer</strong> with a strong foundation in Manual Testing, API Testing, Database Testing, and Automation Testing using <strong>Selenium WebDriver</strong> and <strong>TestNG</strong>. My background in Computer Science and hands-on experience building web applications with <strong>React.js</strong> and <strong>Laravel</strong> give me a strong understanding of how software is designed, developed, and validated.
-              </p>
+              {/* Refined Small Profile Card Header (Option B) */}
+              <div className="flex items-center gap-4 pb-5 border-b border-slate-200 dark:border-slate-800/80">
+                {/* Small Head & Shoulders Photo */}
+                <div className="relative shrink-0">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border-2 border-indigo-500/30 dark:border-indigo-500/40 shadow-sm">
+                    {!imgError ? (
+                      <img
+                        src={personalInfo.avatar || "/omnia.jpg"}
+                        alt={personalInfo.name}
+                        onError={() => setImgError(true)}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-tr from-indigo-700 to-emerald-600 text-white font-bold text-lg font-mono">
+                        OK
+                      </div>
+                    )}
+                  </div>
+                  {/* Subtle live status dot */}
+                  <span
+                    className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900 shadow-xs"
+                    title="Available for Software Testing"
+                  />
+                </div>
 
-              <p>
-                After several years working in web development, I am now focusing on Software Testing and Quality Assurance, combining my development experience with a quality-focused mindset.
-              </p>
-
-              <div className="pt-2">
-                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-start gap-3 text-slate-700 dark:text-slate-300">
-                  <Quote className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
-                  <p className="italic text-sm text-slate-700 dark:text-slate-200">
-                    "{personalInfo.supportingCopy}"
+                {/* Profile Identity Text */}
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+                      {personalInfo.name}
+                    </h3>
+                    <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
+                      QA Engineer
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
+                    CS Graduate • 3+ Years Web Dev Foundation
                   </p>
+                  <div className="flex items-center gap-1.5 mt-1 text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    <span>From Development to Quality Engineering</span>
+                  </div>
                 </div>
               </div>
+
+              {/* Story Description */}
+              <div className="space-y-4 pt-1 text-slate-700 dark:text-slate-300">
+                <p>
+                  I am a <strong>Software Testing Engineer</strong> with a strong foundation in Manual Testing, API Testing, Database Testing, and Automation Testing using <strong>Selenium WebDriver</strong> and <strong>TestNG</strong>. My background in Computer Science and hands-on experience building web applications with <strong>React.js</strong> and <strong>Laravel</strong> give me a strong understanding of how software is designed, developed, and validated.
+                </p>
+
+                <p>
+                  After several years working in web development, I am now focusing on Software Testing and Quality Assurance, combining my development experience with a quality-focused mindset.
+                </p>
+
+                <div className="pt-2">
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                    <Quote className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+                    <p className="italic text-sm text-slate-700 dark:text-slate-200">
+                      "{personalInfo.supportingCopy}"
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             {/* Personality statement */}

@@ -1,4 +1,5 @@
 export const personalInfo = {
+  avatar: "/omnia.png", // Default elegant avatar. To use your photo, save it as public/omnia.jpg and set avatar: "/omnia.jpg"
   name: "Omnia Khattab",
   title: "Software Testing Engineer",
   location: "Giza, Egypt",
