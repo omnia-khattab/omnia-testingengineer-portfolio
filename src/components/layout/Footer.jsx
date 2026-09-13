@@ -33,7 +33,7 @@ export default function Footer() {
                 {personalInfo.name}
               </span>
               <span className="text-xs font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                QA Engineer
+                QC Engineer
               </span>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
