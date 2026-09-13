@@ -30,11 +30,12 @@ export default function About() {
   return (
     <section id="about" className="py-16 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+          
         <SectionHeading
           tag="01. About"
           title="From Development to"
           accent="Quality"
+          img={true}
         />
 
         <div className="max-w-3xl mx-auto space-y-8">

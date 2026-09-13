@@ -4,6 +4,7 @@ export default function SectionHeading({
   tag,
   title,
   subtitle,
+  img = false,
   align = 'center',
   accent,
   className = ''
@@ -11,13 +12,21 @@ export default function SectionHeading({
   const isCenter = align === 'center';
 
   return (
-    <div className={`mb-12 md:mb-16 ${isCenter ? 'text-center mx-auto max-w-3xl' : 'max-w-3xl'} ${className}`}>
+    <div className={`mb-12 md:mb-5 ${isCenter ? 'text-center mx-auto max-w-3xl' : 'max-w-3xl'} ${className}`}>
       {tag && (
         <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono font-medium tracking-wider uppercase mb-3 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-indigo-600 dark:text-indigo-400 ${isCenter ? 'justify-center' : ''}`}>
           <span className="text-emerald-500 dark:text-emerald-400 font-bold">✓</span>
           <span>{tag}</span>
         </div>
       )}
+      { img &&( 
+      <div className=" my-5 w-32 h-32 m-auto rounded-full bg-gradient-to-tr from-indigo-600 to-emerald-500 p-0.5 shadow-sm">
+        <div className="w-full h-full bg-slate-950 rounded-full flex items-center justify-center">
+          <img className="w-full h-full rounded-full" src="/omnia.png" alt="Profile photo" />
+        </div>
+      </div>)
+      }
+      
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
         {title}{' '}
         {accent && (
@@ -26,11 +35,13 @@ export default function SectionHeading({
           </span>
         )}
       </h2>
+      
       {subtitle && (
         <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
           {subtitle}
         </p>
       )}
+
     </div>
   );
 }
