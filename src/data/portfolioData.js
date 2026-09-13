@@ -27,7 +27,7 @@ export const educationAndTraining = [
   {
     type: "professional-training",
     title: "Professional Training",
-    institution: "Digital Egypt Pioneers Initiative (DEPI)",
+    institution: "Ministry of Communications and Information Technology (MCIT)",
     subtitle: "Software Testing Track",
     period: "Jul 2026 – Present",
     badge: "In Progress",
@@ -107,8 +107,8 @@ export const toolsList = [
 
 export const workExperience = [
   {
-    role: "Software Testing Trainee",
-    company: "Digital Egypt Pioneers Initiative — DEPI",
+    role: "Software Testing Engineer",
+    company: "DEPI",
     type: "Training Program",
     badge: "Training",
     badgeColor: "emerald",
@@ -148,7 +148,7 @@ export const workExperience = [
   {
     role: "React Front-End Developer",
     company: "Smart Sigma",
-    type: "Contract",
+    type: "Employment",
     badge: "Engineering",
     badgeColor: "indigo",
     period: "Jun 2024 – Dec 2025",
