@@ -156,7 +156,7 @@ export default function Hero() {
                     { label: 'Regression:', value: 'Validated', color: 'text-emerald-600 dark:text-emerald-400' },
                     { label: 'DB Queries:', value: 'Verified', color: 'text-emerald-600 dark:text-emerald-400' },
                   ].map(({ label, value, color }) => (
-                    <div key={label} className="flex items-center justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800/80">
+                    <div key={label} className="flex flex-wrap items-center justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800/80">
                       <span className="text-slate-500 dark:text-slate-400">{label}</span>
                       <span className={`font-semibold flex items-center gap-1 ${color}`}>
                         {label === 'API Contract:' && <Check className="w-3 h-3" />}
@@ -168,7 +168,7 @@ export default function Hero() {
 
                 {/* Test log console */}
                 <div className="rounded-xl bg-slate-900 border border-slate-800 p-3 space-y-2 text-slate-100">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 border-b border-slate-800 pb-1.5">
+                  <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-400 border-b border-slate-800 pb-1.5">
                     <span className="flex items-center gap-1">
                       <Terminal className="w-3.5 h-3.5 text-indigo-400" />
                       <span>Execution Trace</span>
