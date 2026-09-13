@@ -72,7 +72,7 @@ export default function Navbar() {
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="font-bold text-slate-900 dark:text-white text-base tracking-tight">Omnia Khattab</span>
+              <span className="font-bold text-xs md:text-sm text-slate-900 dark:text-white text-base tracking-tight">Omnia Khattab</span>
               <span className="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
                 QA
               </span>
